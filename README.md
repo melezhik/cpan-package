@@ -30,6 +30,15 @@ cpanm client ( as it used to install cpan modules )
     );
     
 
+# Plugin parameters
+
+## list
+
+should be space separated list of packages to install. For example
+
+    list CGI DBI Moose
+
+
 # AUTHOR
 
 [Alexey Melezhik](mailto:melezhik@gmail.com)
