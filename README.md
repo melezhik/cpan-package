@@ -43,8 +43,10 @@ Should be space separated list of packages to install. For example:
 
 Specify the install base to install modules. See also `-l` parameter for cpanm client.
 
-Optional parameter.
+## user
 
+Specify a user which runs installer process. Normally you would need it when install modules
+into someone's home directory.
 
 # AUTHOR
 
