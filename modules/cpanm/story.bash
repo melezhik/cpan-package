@@ -1,3 +1,3 @@
-echo install $(story_var package)
-echo install ok
+echo install $(story_var package) ...
+cpanm $(story_var package)  -l /tmp/ -q && echo install ok
 
