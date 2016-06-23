@@ -25,7 +25,8 @@ cpanm client ( as it used to install cpan modules )
       task => 'install some modules',
       plugin => 'cpan-package',
       parameters => %( 
-        list => 'CGI DBI Moose' 
+        list => 'CGI DBI Moose',
+        install-base => '/var/app/'
       )
     );
     
@@ -34,9 +35,15 @@ cpanm client ( as it used to install cpan modules )
 
 ## list
 
-should be space separated list of packages to install. For example
+Should be space separated list of packages to install. For example:
 
     list CGI DBI Moose
+
+## install-base
+
+Specify the install base to install modules. See also `-l` parameter for cpanm client.
+
+Optional parameter.
 
 
 # AUTHOR
