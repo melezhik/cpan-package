@@ -48,6 +48,14 @@ Specify the install base to install modules. See also `-l` parameter for cpanm c
 Specify a user which runs installer process. Normally you would need it when install modules
 into someone's home directory.
 
+## http_proxy
+
+Specify http proxy server to use when installing cpan packages
+
+## http_proxy
+
+Specify https proxy server to use when installing cpan packages
+
 # AUTHOR
 
 [Alexey Melezhik](mailto:melezhik@gmail.com)
