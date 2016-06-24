@@ -52,7 +52,7 @@ into someone's home directory.
 
 Specify http proxy server to use when installing cpan packages
 
-## http_proxy
+## https_proxy
 
 Specify https proxy server to use when installing cpan packages
 

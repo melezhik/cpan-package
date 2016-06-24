@@ -34,9 +34,11 @@ else
   echo install $package into $install_base ...
 
   if test -z $user; then
+    $set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q -l $install_base && echo install ok
   else
-    su --shell `which bash` --login -c "cpanm $story_var $package -q  -l $install_base && echo install ok" $user
+    su --shell `which bash` --login -c "$set_https_proxy $set_http_proxy \
+    cpanm $story_var $package -q  -l $install_base && echo install ok" $user
   fi
 
 fi
