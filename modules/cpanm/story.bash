@@ -14,15 +14,18 @@ fi
 
 if test -z $install_base; then
 
-  echo install $package ...
 
   if test -z $user; then
+
+    echo install $package ...
 
     $set_https_proxy $set_http_proxy \
 
     cpanm $story_var $package  -q && echo install ok
 
   else
+
+    echo install $package user $user ...
 
     su --shell `which bash` --login -c "$set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q && echo install ok" $user
@@ -31,12 +34,13 @@ if test -z $install_base; then
 
 else
 
-  echo install $package into $install_base ...
 
   if test -z $user; then
+    echo install $package into $install_base ...
     $set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q -l $install_base && echo install ok
   else
+    echo install $package into $install_base user $user ...
     su --shell `which bash` --login -c "$set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q  -l $install_base && echo install ok" $user
   fi
