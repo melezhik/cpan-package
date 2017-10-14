@@ -1,6 +1,6 @@
 {
   "name" : "cpan-package",
-  "version" : "0.1.1",
+  "version" : "0.1.2",
   "description" : "simple cpan modules installer",
   "url" : "https://github.com/melezhik/cpan-package"
 

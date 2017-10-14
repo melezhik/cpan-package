@@ -25,7 +25,7 @@ if test -z $install_base; then
 
     echo install $package user $user ...
 
-    su --login -c "$set_https_proxy $set_http_proxy \
+    su --login --shell `type -P bash` -c "$set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q && echo install ok" $user
 
   fi
@@ -38,7 +38,7 @@ else
     cpanm $story_var $package -q -l $install_base && echo install ok
   else
     echo install $package into $install_base user $user ...
-    su --login -c "$set_https_proxy $set_http_proxy \
+    su --login --shell `type -P bash` -c "$set_https_proxy $set_http_proxy \
     cpanm $story_var $package -q  -l $install_base && echo install ok" $user
   fi
 
