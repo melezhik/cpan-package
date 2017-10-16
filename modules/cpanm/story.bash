@@ -1,3 +1,5 @@
+set -e
+
 install_base=$(config install-base)
 user=$(config user)
 package=$(story_var package)
